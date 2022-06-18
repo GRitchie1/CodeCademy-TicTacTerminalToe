@@ -14,8 +14,6 @@ class Grid():
             print(self.grid[i])
 
     def _checkForWin(self):
-        if self.moves >= self.totalMoves:
-            return "Game Over"
         for row in self.grid:                                           #Check Rows
             if row[0]==row[1]==row[2]:
                 if row[0]=="X":
@@ -23,7 +21,7 @@ class Grid():
                 if row[0]=="O":
                     return "Player 2 Wins"
         for i in range(self.gridSize):                                  #Check columns
-            if self.grid[0][i] == self.grid[1][i] == self.grid[1][i]:
+            if self.grid[0][i] == self.grid[1][i] == self.grid[2][i]:
                 if self.grid[0][i]=="X":
                     return "Player 1 Wins"
                 if self.grid[0][i]=="O":
@@ -40,6 +38,9 @@ class Grid():
                     return "Player 1 Wins"
             if self.grid[2][0]=="O":
                 return "Player 2 Wins"
+                
+        if self.moves >= self.totalMoves:
+            return "Game Over - Draw"
         return None
 
     def _verifyMove(self,x,y,player):
