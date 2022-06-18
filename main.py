@@ -9,6 +9,6 @@ grid.displayGrid()
 print('=======================================')
 
 
-while True:
+while grid.continueGame:
     grid.playerMove(1)
     grid.playerMove(2)
