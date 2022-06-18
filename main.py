@@ -8,10 +8,7 @@ grid= Grid()
 grid.displayGrid()
 print('=======================================')
 
-grid.playMove(0,0,1)
-grid.displayGrid()
-print('=======================================')
 
-grid.playMove(0,1,2)
-grid.displayGrid()
-print('=======================================')
+while True:
+    grid.playerMove(1)
+    grid.playerMove(2)
